@@ -276,11 +276,11 @@
         if (t) t.style.display = 'none';
       }
       // O loader da Unity estima o tamanho descomprimido como 2x o Content-Length,
-      // mas a compressao real deste build e ~1.08x. O download entao "termina" com
-      // o callback em 0.9 * 54867183 / (2 * 50788769) = 0.48614 (49%). Normalizamos
+      // mas a compressao real deste build e ~1.55x. O download entao "termina" com
+      // o callback em 0.9 * 78713104 / (2 * 50788769) = 0.69742 (70%). Normalizamos
       // para a barra chegar a 100% no fim real do download.
       // Se o build mudar, recalcular: 0.9 * tamanho_descomprimido / (2 * tamanho_br).
-      var PROGRESSO_FIM_DOWNLOAD = 0.4861356720419824;
+      var PROGRESSO_FIM_DOWNLOAD = 0.6974159346134182;
       function atualizarTelaCarregamento(progress) {
         var barra = document.getElementById('tc-barra');
         var texto = document.getElementById('tc-texto');
